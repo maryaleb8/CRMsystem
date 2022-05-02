@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- <form action='http://0.0.0.0:5000/add_new_order' method="post">
+  <div>
+    <label for="example">Let's submit some text</label>
+    <input id="example1" type="text" name="order_id">
+    <input id="example2" type="text" name="status">
+  </div>
+  <div>
+    <input type="submit" value="Send">
+  </div>
+</form> -->
+
+<div class="flex items-center h-screen w-full bg-teal-lighter">
+  <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+    <form class="mb-4 md:flex md:flex-wrap md:justify-between" action="http://0.0.0.0:5000/add_new_order" method="post">
+      <div class="flex flex-col mb-4 md:w-1/2">
+        <label class="mb-2 uppercase tracking-wide font-bold text-lg text-grey-darkest" for="Order id">Add order id</label>
+        <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="text" name="order_id">
+      </div>
+      <div class="flex flex-col mb-6 md:w-full">
+        <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="order_status">Add order status</label>
+        <input class="border py-2 px-3 text-grey-darkest" type="password" name="status">
+      </div>
+      <button class="bg-indigo-500   uppercase text-lg mx-auto p-4 rounded" type="submit">Add new order</button>
+    </form>
+</div>
+
+<!-- <div class="w-full max-w-xs">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="http://0.0.0.0:5000/add_new_order" method="post">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="order_id">
+        Add order id
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="submit" placeholder="order_id">
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="status">
+        Add current status
+      </label>
+      <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="submit" placeholder="created">
+      <p class="text-red-500 text-xs italic">order status</p>
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Add new order
+      </button>
+      
+    </div>
+  </form>
+  <p class="text-center text-gray-500 text-xs">
+    &copy;2022 Masha
+  </p>
+</div> -->
+</body>
+</html>
