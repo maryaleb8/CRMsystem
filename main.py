@@ -1,9 +1,9 @@
+#!/usr/bin/python3
 import sqlite3
 from flask import Flask
 
 conn = sqlite3.connect('otbor4.s3db', check_same_thread=False)
 cur = conn.cursor()
-
 
 # creating table
 #
@@ -22,17 +22,17 @@ def add_order(cur, order_id, status):
     # a = inp.split(" ")[0]
     # b = inp.split(" ")[1]
     # cur.execute('INSERT INTO t1(a, b) VALUES (?, ?);', (a, b))
-    cur.execute("INSERT INTO t1(order_id, status) VALUES ('{}', '{}');".format(order_id, status))
+    cur.execute("INSERT INTO t1(order_id, status) VALUES ('?', '?');", (order_id, status))
     conn.commit()
 
 
 def delete_order(cur, b):
-    cur.execute("DELETE FROM t1 WHERE b={};".format(b))
+    cur.execute("DELETE FROM t1 WHERE b=?;", (b))
     conn.commit()
 
 
 def update_order(cur, b, new):
-    cur.execute("UPDATE t1 SET a = {} where b = {}".format(new, b))
+    cur.execute("UPDATE t1 SET a = ? where b = ?", (new, b))
     conn.commit()
 
 
