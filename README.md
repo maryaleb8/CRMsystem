@@ -1,6 +1,6 @@
 # To start with
 
-Run the command line: python3 otbor.py
+Run the command line: python3 main.py
 
 # Functionality:
 Admins have an opportunity to add new order to database with order status
