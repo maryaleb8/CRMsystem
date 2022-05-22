@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Ура!</h1>
+  <p class="lead">Спасибо, что зашли! Если у вас возникли сложности или вы хотите поблагодарить меня, ссылка находится ниже.</p>
+</div>
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Контактная информация</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>mail: lebedeva.mk@phystech.edu</li>
+          <li>tg: marya_leb8</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='https://t.me/marya_leb8'">My telegram</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

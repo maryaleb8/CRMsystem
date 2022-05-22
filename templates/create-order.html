@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление заказа
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление заказа</h1>
+    <form method="post">
+
+        <textarea name="intro" id="intro" class="form-control" placeholder="Описание заказа"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Комментарии"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Заказы
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Все заказы</h1>
+
+    {% if orders|length > 0 %}
+        {% for el in orders %}
+
+        <div class="alert alert-info">
+            <h2>Номер заказа: {{ el.id }}</h2>
+            <p>{{ el.intro }}</p>
+            <p><b>Дата: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">Посмотреть комментарий</a>
+            <a href="/posts/{{ el.id }}/del" class="btn btn-danger">Удалить</a>
+            <a href="/posts/{{ el.id }}/update" class="btn btn-success">Редактировать</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще нет заказов</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ order.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Комментарий к заказу {{ order.id }}</h1>
+
+    <div class="alert alert-info">
+        <p>{{ order.text }}</p>
+        <p><b>Дата: {{ order.date.date() }}</b></p>
+        <a href="/posts/{{ order.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/posts/{{ order.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}
