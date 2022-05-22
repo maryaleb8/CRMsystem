@@ -17,13 +17,19 @@ I made a convenient window for the administrator, with which you can easily add 
 
 Open terminal.
 Make sure you have python3 and flask, flask_sqlalchemy, datetime installed:
-"""sudo apt install python3
+```
+sudo apt install python3
 pip install flask
 pip install flask_sqlalchemy
-pip install datetime"""
+pip install datetime
+```
 Download the project:
-"""git clone https://github.com/maryaleb8/CRMsystem.git
+```
+git clone https://github.com/maryaleb8/CRMsystem.git
 cd CRMsystem
-chmod +x main.py"""
+chmod +x main.py
+```
 Execute:
-"""python3 app.py"""
+```
+python3 app.py
+```
