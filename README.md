@@ -27,7 +27,7 @@ Download the project:
 ```
 git clone https://github.com/maryaleb8/CRMsystem.git
 cd CRMsystem
-chmod +x add.py
+chmod +x app.py
 ```
 Execute:
 ```
