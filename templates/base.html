@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
     <footer class="container pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <img class="mb-2" src="/static/photo.jpg " alt="" width="50">
+        <img class="mb-2" src="{{ url_for('static', filename='photo.jpg') }}" alt="" width="50">
         <small class="d-block mb-3 text-muted">© 2022</small>
       </div>
       <div class="col-6 col-md">
