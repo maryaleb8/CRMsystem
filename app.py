@@ -49,7 +49,7 @@ def post_delete(id):
     try:
         db.session.delete(order)
         db.session.commit()
-        return redirect('/posts')
+        return redirect(url_for('posts'))
     except:
         return "При удалении статьи произошла ошибка"
 
@@ -63,7 +63,7 @@ def post_update(id):
 
         try:
             db.session.commit()
-            return redirect('/posts')
+            return redirect(url_for('posts'))
         except:
             return "При редактировании статьи произошла ошибка"
     else:
@@ -82,7 +82,7 @@ def create_order():
             order = Order(title='', intro=intro, text=text)
             db.session.add(order)
             db.session.commit()
-            return redirect('/posts')
+            return redirect(url_for('posts'))
         except:
             return "При добавлении произошла ошибка"
     else:
