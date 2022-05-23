@@ -11,7 +11,12 @@
     <div class="alert alert-info">
         <p>{{ order.text }}</p>
         <p><b>Дата: {{ order.date.date() }}</b></p>
-        <a href="/posts/{{ order.id }}/del" class="btn btn-danger">Удалить</a>
+        <!-- <a href="/posts/{{ order.id }}/del" class="btn btn-danger">Удалить</a> -->
+
+        <form action="/posts/{{ order.id }}/del" method="POST" style="display: inline;">
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        </form>
+
         <a href="/posts/{{ order.id }}/update" class="btn btn-success">Редактировать</a>
     </div>
 

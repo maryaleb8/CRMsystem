@@ -16,7 +16,12 @@
             <p>{{ el.intro }}</p>
             <p><b>Дата: {{ el.date.date() }}</b></p>
             <a href="/posts/{{ el.id }}" class="btn btn-warning">Посмотреть комментарий</a>
-            <a href="/posts/{{ el.id }}/del" class="btn btn-danger">Удалить</a>
+            <!-- <a href="/posts/{{ el.id }}/del" class="btn btn-danger">Удалить</a> -->
+
+            <form action="/posts/{{ el.id }}/del" method="POST" style="display: inline;">
+            <input type="submit" value="Удалить" class="btn btn-danger" />
+            </form>
+
             <a href="/posts/{{ el.id }}/update" class="btn btn-success">Редактировать</a>
         </div>
         {% endfor %}

@@ -42,7 +42,7 @@ def post_detail(id):
     return render_template("post_detail.html", order=order)
 
 
-@app.route('/posts/<int:id>/del')
+@app.route('/posts/<int:id>/del', methods=['POST'])
 def post_delete(id):
     order = Order.query.get_or_404(id)
 
