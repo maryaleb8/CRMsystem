@@ -15,9 +15,9 @@
         <h2>Номер заказа: {{ el.id }}</h2>
         <p>{{ el.intro }}</p>
         <p><b>Дата: {{ el.date.date() }}</b></p>
-        <a href="{{ url_for('posts', id=el.id)}}" class="btn btn-warning">Посмотреть комментарий</a>
+        <a href="{{ url_for('post_detail', id=el.id)}}" class="btn btn-warning">Посмотреть комментарий</a>
 
-        <form action="{{ url_for('post_delete', id=el.id) }}" method="POST" style="display: inline;">
+        <form action="{{ url_for('post_delete', id=el.id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Точно удалить?')">
         <input type="submit" value="Удалить" class="btn btn-danger" />
         </form>
 
