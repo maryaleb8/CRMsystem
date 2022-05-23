@@ -8,24 +8,23 @@
 <div class="container mt-5">
     <h1>Все заказы</h1>
 
-    {% if orders|length > 0 %}
-        {% for el in orders %}
 
-        <div class="alert alert-info">
-            <h2>Номер заказа: {{ el.id }}</h2>
-            <p>{{ el.intro }}</p>
-            <p><b>Дата: {{ el.date.date() }}</b></p>
-            <a href="{{ url_for('posts', id=el.id)}}" class="btn btn-warning">Посмотреть комментарий</a>
+    {% for el in orders %}
 
-            <form action="{{ url_for('post_delete', id=el.id) }}" method="POST" style="display: inline;">
-            <input type="submit" value="Удалить" class="btn btn-danger" />
-            </form>
+    <div class="alert alert-info">
+        <h2>Номер заказа: {{ el.id }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href="{{ url_for('posts', id=el.id)}}" class="btn btn-warning">Посмотреть комментарий</a>
 
-            <a href="{{ url_for('post_update', id=el.id) }}" class="btn btn-success">Редактировать</a>
-        </div>
-        {% endfor %}
+        <form action="{{ url_for('post_delete', id=el.id) }}" method="POST" style="display: inline;">
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        </form>
+
+        <a href="{{ url_for('post_update', id=el.id) }}" class="btn btn-success">Редактировать</a>
+    </div>
     {% else %}
     <p>Еще нет заказов</p>
-    {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}
